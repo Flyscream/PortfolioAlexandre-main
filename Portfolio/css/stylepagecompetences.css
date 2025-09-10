@@ -1,3 +1,12 @@
+
+/* Reset styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; 
+  }
+  
+  
 nav {
     margin: 0 auto 30px auto;
     text-align: center;
@@ -22,38 +31,11 @@ nav {
     color: #222;
 }
 
-/* Section À propos */
-section#about {
-    background: #fff;
-    margin: 30px auto;
-    padding: 32px 24px;
-    max-width: 600px;
-    border-radius: 16px;
-    box-shadow: 0 2px 16px rgba(79,70,229,0.07);
-    text-align: center;
-    animation: fadeInUp 0.8s;
-}
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-section#about h2 {
-    color: #6366f1;
-    margin-bottom: 18px;
-    font-size: 1.5em;
-    font-weight: 600;
-}
-section#about p {
-    font-size: 1.08em;
-    line-height: 1.7;
-    color: #333;
-}
+  
+ 
+  main {
+    padding: 20px; 
+  }
   
   h1 {
     text-align: center;
@@ -97,24 +79,51 @@ section#about p {
 }
 
 
+footer {
+    background: #4f46e5;
+    color: #fff;
+    padding: 12px 0 8px 0;
+    margin-top: 30px;
+}
 .footer-container {
-    display: flex; 
-    justify-content: space-around;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 12px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
-
-img {
-    width : 50px;
-    height : 50px;
+.footer-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
 }
-
-.social-icons img {
-    width: 20px; 
-    height: 20px;
-    margin: 0 10px;
-}
-
 .footer-info, .contact-info {
-    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    font-size: 1em;
+    margin: 0;
+}
+.footer-info span, .contact-info span {
+    margin: 0;
+}
+.contact-info a {
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 4px;
+}
+.social-icons {
+    display: none;
+}
+@media (max-width: 700px) {
+    .footer-container {
+        padding: 0 4px;
+    }
+    .footer-row {
+        gap: 8px;
+    }
 }
