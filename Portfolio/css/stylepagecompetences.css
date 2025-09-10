@@ -1,0 +1,113 @@
+
+/* Reset styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; 
+  }
+  
+  
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav li {
+    background-color: #f0f0f0;
+    padding: 40px 60px;
+    margin: 5%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+nav {
+  background-color: #AAA; 
+  padding: 10px 0;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: #000000; 
+}
+
+
+nav li {
+  padding: 15px 30px; 
+  margin: 0 10px; 
+  border-radius: 5px;
+}
+
+  
+ 
+  main {
+    padding: 20px; 
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px; 
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+  }
+  
+  .card {
+    width: 25%; 
+    margin: 10px; 
+    text-align: center;
+    padding: 10px;
+    border: 3px solid #AAA; 
+    border-radius: 5px; 
+  }
+  
+  .card img {
+    width: 100%; 
+    height: auto;  
+    object-fit: cover;  
+    margin-bottom: 10px;
+}
+  
+  .card p {
+    margin-bottom: 10px; 
+  }
+  
+  progress {
+    width: 100%; 
+  }
+  
+  footer {
+    background-color: #ddd;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.footer-container {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+img {
+    width : 50px;
+    height : 50px;
+}
+
+.social-icons img {
+    width: 20px; 
+    height: 20px;
+    margin: 0 10px;
+}
+
+.footer-info, .contact-info {
+    margin-top: 10px;
+}
