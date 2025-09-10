@@ -1,80 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Projet - PortFolio</title>        
-        <link rel="stylesheet" href="../css/stylepageprojet.css"> 
-    </head>
-    <header id="main-header">
-        <nav>
-            <ul class="nav-links">
-              <li><a href="pageaccueil_portfolio.html">Accueil</a></li>
-              <li><a href="pagecompetences_portfolio.html">Compétences</a></li>
-              <li><a href="pageprojet_portfolio.html">Projets</a></li>
-              <li><a href="Contact.html">Contact</a></li>
-            </ul>
-          </nav>
-        
-          <main>
-            <section id="about"></section>  <section id="skills"></section>  <section id="projects"></section> </main>
-    </header> 
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projets — Portfolio</title>
+  <link rel="stylesheet" href="../css/stylepageprojet.css" />
+</head>
 <body>
+  <header id="main-header">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="pageaccueil_portfolio.html">Accueil</a></li>
+        <li><a href="pagecompetences_portfolio.html">Compétences</a></li>
+        <li><a href="pageprojet_portfolio.html">Projets</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
     <h1>Projets</h1>
-    <div class="project">
-        
-        <a href="#" target="_blank"></a>
-        <img src="../img/arduino.jpg" alt="Photo de pac-man" class="ph_pacman">
-        </a>
-        <h2>projet agricole</h2>
-        <p>Duran ma dernière année de terminale, nous devions créer une robot agricole. Pour le faire marcher nous avons injecter du code en C sur une carte arduino. Durant ce travail de groupe, nous avions aussi imprimer les pièces les plus importantes du robot pour montrer 
-        </p>
-        
-        <a href="#" target="_blank"></a>
-        <img src="../img/Pac-man.jpg" alt="Photo de pac-man" class="ph_pacman">
-        </a>
-        <h2>IA pour Pac-Man</h2>
-        <p>En groupe, en utilisant le language python, nous devions créer une ia qui joue a notre place a pac-man. Sont but a été de faire le plus de points dans un temps impartie. Le projet a été realisé en quelques semaines en groupe de 4 personnes. il a fallut que nous fassions des recherches sur les algorithmes d'ia pour pouvoir le faire. Le projet a été un succès car nous avions finit dans les temps et l'ia fonctionnait plutot bien.
-        </p>
 
-
-        <a href="#" target="_blank"></a>
-        <img src="../img/JO.jpg" alt="Photo de pac-man" class="ph_pacman">
-        </a>
-        <h2>JO</h2>
-        <p>Conception d'un logiciel pour organiser des Jeux Olympique. Ce projet liais le javascript/HTML/CSS et SQL. Dans ce projet nous devions gérer les athlètes, les équipes qui participaient aux jeux mais aussi aux résultats des différentes épreuves qui ce sont dérouller. L'application a été faite en groupe de 4 personnes et a duré plusieurs semaines. Ce projet a été realisé dans les temps et respectait le cahier des charges.
-        </p>
-
-
-          <a href="#" target="_blank"></a>
-        <img src="../img/imageAvion.png" alt="API Avion" class="api_avion">
-        </a>
-        <h2>API Avion</h2>
-        <p>Création d'une application web en utilisant une API. L'API en question nous permettait de récupérer des informations sur les avions en temps réel. Nous avons utilisé le HTML/CSS/Javascript pour faire cette application. Le projet a été fait en groupe de 3 personnes. 2 personnes s'occupaient de develloper l'application web, et le 3 eme personnes s'occupaient de chercher et de mettre en ligne le projet. 
-        </p>
-      
-
-          <a href="#" target="_blank"></a>
-        <img src="../img/click.png" alt="Projet clicker" class="Projet_clicker">
-        </a>
-        <h2>Projet clicker</h2>
-        <p>La création du jeu clicker, est un projet de fin d'année de 1 ere année de BTS SIO. Le but du jeu était de créer un petit jeu en javaFx en
-         utilisant Scenebuilder. Le jeu a été develloper en java ou le but est de cliquer sur un bouton pour gagner de l'argent et acheter des améliorations.Le projet a été un succès car j'ai réussi a faire un jeu fonctionnel et amusant.
-        </p>
-
-
-    </div>
-
-    <footer>
-          <div class="footer-info">
-            <p>Alexandre Gleizes</p>
-            <p>PORTFOLIO SITE</p>
-          </div>
-    
-          <div class="contact-info">
-            <p>Email :<a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSHxTqbjzKtzNltXtJpMzxMhHWLTFGggNJwCWwWBDgwRWNqkPwkQHmnqcNQvQdtXRGlWLQrP">alexgleizes18@gmail.com</a></p>
-          </div>
+    <section id="projects" class="projects-grid">
+      <article class="project-card">
+        <img src="../img/arduino.jpg" alt="Projet agricole - Arduino" />
+        <div class="project-info">
+          <h3>Projet agricole</h3>
+          <p>Duran ma dernière année de terminale, nous devions créer une robot agricole. Pour le faire marcher nous avons injecter du code en C sur une carte arduino. Durant ce travail de groupe, nous avions aussi imprimer les pièces les plus importantes du robot pour montrer</p>
         </div>
-      </footer>
-    </body>
+      </article>
+
+      <article class="project-card">
+        <img src="../img/Pac-man.jpg" alt="IA pour Pac-Man" />
+        <div class="project-info">
+          <h3>IA pour Pac-Man</h3>
+          <p>En groupe, en utilisant le language python, nous devions créer une ia qui joue a notre place a pac-man. Sont but a été de faire le plus de points dans un temps impartie. Le projet a été realisé en quelques semaines en groupe de 4 personnes. il a fallut que nous fassions des recherches sur les algorithmes d'ia pour pouvoir le faire. Le projet a été un succès car nous avions finit dans les temps et l'ia fonctionnait plutot bien.</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img src="../img/JO.jpg" alt="Application Jeux Olympiques" />
+        <div class="project-info">
+          <h3>Application JO</h3>
+          <p>Conception d'un logiciel pour organiser des Jeux Olympique. Ce projet liais le javascript/HTML/CSS et SQL. Dans ce projet nous devions gérer les athlètes, les équipes qui participaient aux jeux mais aussi aux résultats des différentes épreuves qui ce sont dérouller. L'application a été faite en groupe de 4 personnes et a duré plusieurs semaines. Ce projet a été realisé dans les temps et respectait le cahier des charges.</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img src="../img/imageAvion.png" alt="API Avion" />
+        <div class="project-info">
+          <h3>API Avion</h3>
+          <p>Création d'une application web en utilisant une API. L'API en question nous permettait de récupérer des informations sur les avions en temps réel. Nous avons utilisé le HTML/CSS/Javascript pour faire cette application. Le projet a été fait en groupe de 3 personnes. 2 personnes s'occupaient de develloper l'application web, et le 3 eme personnes s'occupaient de chercher et de mettre en ligne le projet.</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img src="../img/click.png" alt="Projet Clicker" />
+        <div class="project-info">
+          <h3>Projet Clicker</h3>
+          <p>La création du jeu clicker, est un projet de fin d'année de 1 ere année de BTS SIO. Le but du jeu était de créer un petit jeu en javaFx en utilisant Scenebuilder. Le jeu a été develloper en java ou le but est de cliquer sur un bouton pour gagner de l'argent et acheter des améliorations.Le projet a été un succès car j'ai réussi a faire un jeu fonctionnel et amusant.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-row">
+        <div class="footer-info">
+          <p>Alexandre Gleizes</p>
+          <p>PORTFOLIO SITE</p>
+        </div>
+        <div class="contact-info">
+          <p>Email : <a href="mailto:alexgleizes18@gmail.com">alexgleizes18@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
