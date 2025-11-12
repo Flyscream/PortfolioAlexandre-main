@@ -1,8 +1,11 @@
-/* Reset styles */
+/* Reset */
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1 {
@@ -12,12 +15,6 @@ h1 {
   margin-bottom: 28px;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 main {
   flex: 1;
   padding: 2rem 1rem;
@@ -25,6 +22,7 @@ main {
   margin: 0 auto;
 }
 
+/* Navigation */
 nav {
   margin: 0 auto 40px auto;
   text-align: center;
@@ -56,10 +54,9 @@ nav {
   justify-content: center;
   gap: 20px;
 }
-
 .card {
-  width: 200px;             /* Taille qui permet de réduite */
-  height: 280px;            /* Taille qui permet de réduite */
+  width: 200px;
+  height: 280px;
   margin: 10px;
   text-align: center;
   padding: 10px;
@@ -69,35 +66,24 @@ nav {
   background: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
-
 .card:hover {
   transform: translateY(-6px) scale(1.05);
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
   border-color: #4f46e5;
 }
-
 .card img {
-  width: 70px;                /*Modifier la taille de l'image */
+  width: 70px;
   height: 70px;
   object-fit: contain;
   margin-bottom: 10px;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
-
 .card:hover img {
   transform: scale(1.1);
-  filter: drop-shadow(0 0 8px rgba(79, 70, 229, 0.4));
+  filter: drop-shadow(0 0 8px rgba(79,70,229,0.4));
 }
-
-.card h2 {
-  font-size: 1.1em;
-  margin-bottom: 5px;
-}
-
-.card p {
-  font-size: 0.85em;
-  margin-bottom: 8px;
-}
+.card h2 { font-size: 1.1em; margin-bottom: 5px; }
+.card p { font-size: 0.85em; margin-bottom: 8px; }
 
 progress {
   width: 80%;
@@ -114,7 +100,6 @@ footer {
   padding: 12px 0 8px 0;
   margin-top: 30px;
 }
-
 .footer-container {
   max-width: 900px;
   margin: 0 auto;
@@ -123,7 +108,6 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
 .footer-row {
   width: 100%;
   display: flex;
@@ -131,7 +115,6 @@ footer {
   align-items: center;
   gap: 6px;
 }
-
 .footer-info,
 .contact-info {
   display: flex;
@@ -141,7 +124,6 @@ footer {
   font-size: 1em;
   margin: 0;
 }
-
 .contact-info a {
   color: #fff;
   text-decoration: underline;
@@ -149,21 +131,8 @@ footer {
 }
 
 @media (max-width: 700px) {
-  .card {
-    width: 150px;       /* Encore plus compact sur mobile */
-    height: 250px;
-  }
-
-  .card img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .footer-container {
-    padding: 0 4px;
-  }
-
-  .footer-row {
-    gap: 8px;
-  }
+  .card { width: 150px; height: 250px; }
+  .card img { width: 60px; height: 60px; }
+  .footer-container { padding: 0 4px; }
+  .footer-row { gap: 8px; }
 }

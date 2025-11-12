@@ -9,37 +9,33 @@ body {
   min-height: 100vh; 
 }
 
-
-/* Header / Nav */
-header { 
-  padding: 18px 0 0 0; 
-}
+/* Navigation */
 nav {
-  text-align: center; 
-  margin-bottom: 8px; 
+  margin: 0 auto 40px auto;
+  text-align: center;
 }
 .nav-links {
   list-style: none;
   display: inline-flex;
-  gap: 24px;
-  padding: 0; 
+  gap: 30px;
+  padding: 0;
 }
-
-.nav-links a {
-  color: #4f46e5;
+.nav-links li a {
   text-decoration: none;
-  padding: 6px 12px;
+  color: #4f46e5;
+  font-size: 1.15em;
+  font-weight: 500;
+  padding: 8px 18px;
   border-radius: 8px;
-  font-weight: 500; 
+  transition: background 0.2s, color 0.2s;
 }
-
-.nav-links a:hover {
+.nav-links li a:hover {
   background: #e0e7ff;
-  color: #222; 
+  color: #222;
 }
 
-/* footer*/
-  main {
+/* Main */
+main {
   flex: 1; 
   padding: 2rem 1rem;
   max-width: 1100px;
@@ -54,13 +50,13 @@ h1 {
   margin-bottom: 28px; 
 }
 
+/* Projets */
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
   width: 100%;
 }
-
 .project-card {
   display: flex;
   gap: 20px;
@@ -75,7 +71,6 @@ h1 {
   transform: translateY(-6px);
   box-shadow: 0 10px 30px rgba(79,70,229,0.12); 
 }
-
 .project-card img {
   width: 180px;
   height: 120px;
@@ -84,41 +79,16 @@ h1 {
   flex: 0 0 180px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-
-.project-info { 
-  flex: 1; 
-}
+.project-info { flex: 1; }
 .project-info h3 {
   font-size: 1.2rem;
   color: #4f46e5;
   margin-bottom: 8px; 
 }
-
-
 .project-info p {
   color: #333;
   line-height: 1.6;
   font-size: .98rem; 
-}
-
-@media (max-width: 760px) {
-  .projects-grid {
-    gap: 16px; 
-  }
-
-
-  .project-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center; 
-  }
-
-  .project-card img {
-    width: 100%;
-    max-width: 420px;
-    height: 220px;
-    flex: none; }
-  .project-info h3 { font-size: 1.1rem; }
 }
 
 /* Footer */
@@ -132,7 +102,6 @@ footer {
   margin: 0 auto;
   padding: 0 12px; 
 }
-
 .footer-row {
   display: flex;
   flex-direction: column;
@@ -140,12 +109,10 @@ footer {
   gap: 6px; 
   text-align: center; 
 }
-
 .footer-info p, .contact-info p {
   margin: 0;
   font-size: .95rem; 
 }
-
 .footer-info a {
   color: #fff;
   text-decoration: underline; 
