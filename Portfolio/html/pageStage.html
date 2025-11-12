@@ -1,129 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Compétences - PortFolio</title>        
-        <link rel="stylesheet" href="../css/stylepageStage.css"> 
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences - PortFolio</title>        
+    <link rel="stylesheet" href="../css/stylepageStage.css"> 
+  </head>
 
-    <main>
-        <section>
-            <header id="main-header">
-                    <nav>
-                        <ul class="nav-links">
-                        <li><a href="pageaccueil_portfolio.html">Accueil</a></li>
-                        <li><a href="pagecompetences_portfolio.html">Compétences</a></li>
-                        <li><a href="pageprojet_portfolio.html">Projets</a></li>
-                          <li><a href="pageStage.html">Stage</a></li>   
-                        <li><a href="Contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
-            </header>      
-        </section>
+  <main>
+    <section>
+      <header id="main-header">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="pageaccueil_portfolio.html">Accueil</a></li>
+            <li><a href="pagecompetences_portfolio.html">Compétences</a></li>
+            <li><a href="pageprojet_portfolio.html">Projets</a></li>
+            <li><a href="pageStage.html">Stage</a></li>   
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>      
+    </section>
 
-        <!-- TIMELINE: ajouter ceci dans <main>, après ta section/nav -->
-<section class="timeline-section" aria-label="Timeline des stages">
-  <h2 class="timeline-title">Mes stages — time-lapse</h2>
+    <section class="timeline-section" aria-label="Timeline des stages">
+      <h2 class="timeline-title">Mes stages — time-lapse</h2>
 
-  <div class="timeline">
-    <!-- Plus vieux en haut -->
-    <article class="timeline-item">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <h3>Stagiaire - Crédit Agricole</h3>
-        <p class="timeline-date">Mai — fin juin 2024 (6 semaines)</p>
-        <p class="timeline-desc">Découverte du milieu bancaire : accueil client, observation des process, participation à des tâches administratives et support aux équipes. Projet court : synthèse des procédures internes.</p>
+      <div class="timeline">
+          <article class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>BCEF IT bnp paribas</h3>
+            <p class="timeline-date">05 Janvier — 20 février 2026 (7 semaines)</p>
+            <p class="timeline-desc">a modifier</p>
+          </div>
+        </article>
+
+
+        <article class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Stagiaire - Crédit Agricole</h3>
+            <p class="timeline-date">Mai — fin juin 2024 (6 semaines)</p>
+            <p class="timeline-desc">Découverte du milieu bancaire : accueil client, observation des process, participation à des tâches administratives et support aux équipes. Projet court : synthèse des procédures internes.</p>
+          </div>
+        </article>
       </div>
-    </article>
 
-    <!-- Placeholder / exemple (remplacer par un stage réel plus récent) 
-    <article class="timeline-item placeholder">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <h3>Stage — À ajouter</h3>
-        <p class="timeline-date">MM/YYYY — MM/YYYY</p>
-        <p class="timeline-desc">Remplace ce texte par le détail du stage (missions, durée, compétences acquises).</p>
+      <!-- Boutons désactivés : Play et Reset -->
+      <!--
+      <div class="timeline-controls" aria-hidden="true">
+        <button id="tl-play" class="tl-btn">▶ Play time-lapse</button>
+        <button id="tl-reset" class="tl-btn">⟲ Reset</button>
       </div>
-    </article>-->
+      -->
+    </section> 
 
-    <!-- Placeholder / exemple (remplacer par un stage réel plus récent) 
-    <article class="timeline-item placeholder">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <h3>Stage — À ajouter</h3>
-        <p class="timeline-date">MM/YYYY — MM/YYYY</p>
-        <p class="timeline-desc">Autre stage plus récent (remplace/duplique selon besoin).</p>
-      </div>
-    </article>
-  </div>-->
+    <script>
+      (function(){
+        const items = document.querySelectorAll('.timeline-item');
+        let idx = 0;
 
-  <!-- Contrôles visuels pour "time-lapse" (play/pause) -->
-  <div class="timeline-controls" aria-hidden="true">
-    <button id="tl-play" class="tl-btn">▶ Play time-lapse</button>
-    <button id="tl-reset" class="tl-btn">⟲ Reset</button>
-  </div>
-</section> 
+        function showNext(){
+          if(idx < items.length){
+            items[idx].classList.add('visible');
+            idx++;
+          } else {
+            clearInterval(timer);
+          }
+        }
 
-<!--Animation time laps
-Language Javascripte -->
-<script>
-  (function(){
-    const items = document.querySelectorAll('.timeline-item');
-    const play = document.getElementById('tl-play');
-    const reset = document.getElementById('tl-reset');
-    let playing = false;
-    let idx = 0;
-    let timer = null;
+        // Lancer automatiquement l'animation au chargement de la page
+        document.addEventListener('DOMContentLoaded', () => {
+          items.forEach(it => it.classList.remove('visible'));
+          idx = 0;
+          timer = setInterval(showNext, 900);
+        });
+      })();
+    </script>
+  </main>
 
-    function showNext(){
-      if(idx < items.length){
-        items[idx].classList.add('visible');
-        idx++;
-      } else {
-        clearInterval(timer);
-        playing = false;
-        play.textContent = '▶ Play time-lapse';
-      }
-    }
-
-    play.addEventListener('click', () => {
-      if(playing){ clearInterval(timer); playing = false; play.textContent = '▶ Play time-lapse'; return; }
-      playing = true; play.textContent = '⏸ Pause';
-      // reset visual then start
-      items.forEach(it => it.classList.remove('visible'));
-      idx = 0;
-      timer = setInterval(showNext, 900);
-    });
-
-    reset.addEventListener('click', () => {
-      clearInterval(timer);
-      playing = false;
-      play.textContent = '▶ Play time-lapse';
-      items.forEach(it => it.classList.remove('visible'));
-      idx = 0;
-    });
-
-    // Accessibility: reveal first item on small load
-    document.addEventListener('DOMContentLoaded', () => {
-      items[0] && items[0].classList.add('visible');
-    });
-  })();
-</script>
-       
-    </main>
-
-    <footer>
-            <div class="footer-info">
-                <p>Alexandre Gleizes</p>
-                <p>PORTFOLIO SITE</p>
-            </div>
-        
-            <div class="contact-info">
-                <p>©️ Creer par Alexandre Gleizes</p>
-                <p>Email : <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSHxTqbjzKtzNltXtJpMzxMhHWLTFGggNJwCWwWBDgwRWNqkPwkQHmnqcNQvQdtXRGlWLQrP">alexgleizes18@gmail.com</a></p>
-            </div>
-            </div>
-        </footer>
-        </body>
+  <footer>
+    <div class="footer-info">
+      <p>Alexandre Gleizes</p>
+      <p>PORTFOLIO SITE</p>
+    </div>
+  
+    <div class="contact-info">
+      <p>©️ Creer par Alexandre Gleizes</p>
+      <p>Email : <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSHxTqbjzKtzNltXtJpMzxMhHWLTFGggNJwCWwWBDgwRWNqkPwkQHmnqcNQvQdtXRGlWLQrP">alexgleizes18@gmail.com</a></p>
+    </div>
+  </footer>
 </html>
