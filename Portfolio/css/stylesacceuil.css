@@ -147,3 +147,10 @@ footer {
     .footer-container { padding: 0 4px; }
     .footer-row { gap: 8px; }
 }
+/* bouton pour telecharger le fichier veille techno */
+.veille-section { margin-top: 20px; display: flex; justify-content: center; }
+.veille-download { text-decoration: none; display: inline-flex; flex-direction: column; align-items: center; gap: 8px; color: inherit; }
+.veille-buche { width: 120px; height: 120px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 44px; box-shadow: 0 6px 18px rgba(16,24,40,0.08); transition: transform .15s ease, box-shadow .15s ease; border: 2px solid #e6e9f8; }
+.veille-download:hover .veille-buche { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(16,24,40,0.12); }
+.veille-filename { font-size: 0.92rem; max-width: 160px; text-align: center; color: #333; word-break: break-all; }
+
