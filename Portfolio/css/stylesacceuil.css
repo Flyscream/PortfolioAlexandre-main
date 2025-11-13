@@ -34,21 +34,22 @@ h1 {
 /* Photo de profil */
 .photo_de_profil {
     display: block;
-    margin: 30px auto 20px auto;
+    margin: 20px auto 20px auto;
     border-radius: 50%;
-    width: 180px;
-    height: 180px;
+    width: 190px;
+    height: 210px;
     object-fit: cover;
-    border: 4px solid #6366f1;
+    object-position: 50% left;
+    border: 5px solid #6366f1;
     box-shadow: 0 4px 24px rgba(79,70,229,0.10);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .photo_de_profil:hover {
-    transform: scale(1.04);
+    transform: scale(1.05);
     box-shadow: 0 8px 32px rgba(79,70,229,0.18);
 }
 
-/* Navigation */
+
 nav {
   margin: 0 auto 40px auto;
   text-align: center;
@@ -73,7 +74,7 @@ nav {
   color: #222;
 }
 
-/* Section À propos */
+
 section#about {
     background: #fff;
     margin: 30px auto;
@@ -147,7 +148,7 @@ footer {
     .footer-container { padding: 0 4px; }
     .footer-row { gap: 8px; }
 }
-/* bouton pour telecharger le fichier veille techno */
+
 .veille-section { margin-top: 20px; display: flex; justify-content: center; }
 .veille-download { text-decoration: none; display: inline-flex; flex-direction: column; align-items: center; gap: 8px; color: inherit; }
 .veille-buche { width: 120px; height: 120px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 44px; box-shadow: 0 6px 18px rgba(16,24,40,0.08); transition: transform .15s ease, box-shadow .15s ease; border: 2px solid #e6e9f8; }
