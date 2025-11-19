@@ -19,6 +19,7 @@ main {
   padding: 2rem 1rem;
   max-width: 1100px;
   margin: 0 auto;
+  flex: 1; /* permet au footer de descendre en bas */
 }
 
 /* Navigation */
@@ -92,47 +93,33 @@ progress {
   appearance: none;
 }
 
-/* Footer */
+/* Footer fixé en bas */
 footer {
+  margin-top: auto;         /* colle le footer en bas */
+  width: 100%;              /* pleine largeur */
   background: #4f46e5;
   color: #fff;
-  padding: 12px 0 8px 0;
-  margin-top: 40px; /* ESPACEMENT STABLE AJOUTÉ */
+  padding: 14px 0;
+  text-align: center;       /* texte centré */
 }
 
-.footer-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer-info, .contact-info {
+  margin-bottom: 6px;
 }
-.footer-row {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-.footer-info,
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  font-size: 1em;
+
+.footer-info p,
+.contact-info p {
   margin: 0;
+  font-size: 0.95rem;
 }
-.contact-info a {
+
+footer a {
   color: #fff;
   text-decoration: underline;
-  margin-left: 4px;
 }
 
+/* Responsive */
 @media (max-width: 700px) {
   .card { width: 150px; height: 250px; }
   .card img { width: 60px; height: 60px; }
-  .footer-container { padding: 0 4px; }
-  .footer-row { gap: 8px; }
 }
