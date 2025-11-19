@@ -1,119 +1,145 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; }
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+html, body { 
+    height: 100%; 
+}
+
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f4f6fb;
-  color: #222;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; 
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6fb;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
 }
 
 /* Navigation */
 nav {
-  margin: 0 auto 40px auto;
-  text-align: center;
+    margin: 0 auto 40px auto;
+    text-align: center;
 }
+
 .nav-links {
-  list-style: none;
-  display: inline-flex;
-  gap: 30px;
-  padding: 0;
+    list-style: none;
+    display: inline-flex;
+    gap: 30px;
+    padding: 0;
 }
+
 .nav-links li a {
-  text-decoration: none;
-  color: #4f46e5;
-  font-size: 1.15em;
-  font-weight: 500;
-  padding: 8px 18px;
-  border-radius: 8px;
-  transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+    color: #4f46e5;
+    font-size: 1.15em;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
 }
+
 .nav-links li a:hover {
-  background: #e0e7ff;
-  color: #222;
+    background: #e0e7ff;
+    color: #222;
 }
 
 /* Main */
 main {
-  flex: 1; 
-  padding: 2rem 1rem;
-  max-width: 1100px;
-  margin: 0 auto;
+    flex: 1; 
+    padding: 2rem 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 /* Titre */
 h1 { 
-  text-align: center;
-  font-size: 2.2rem;
-  color: #4f46e5;
-  margin-bottom: 28px; 
+    text-align: center;
+    font-size: 2.2rem;
+    color: #4f46e5;
+    margin-bottom: 28px; 
 }
 
 /* Projets */
 .projects-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
 }
+
 .project-card {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  background: #fff;
-  border-radius: 12px;
-  padding: 18px;
-  box-shadow: 0 4px 18px rgba(79,70,229,0.06);
-  transition: transform .18s, box-shadow .18s;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 4px 18px rgba(79,70,229,0.06);
+    transition: transform .18s, box-shadow .18s;
 }
+
 .project-card:hover { 
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(79,70,229,0.12); 
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(79,70,229,0.12); 
 }
+
 .project-card img {
-  width: 180px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
-  flex: 0 0 180px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex: 0 0 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-.project-info { flex: 1; }
+
+.project-info { 
+    flex: 1; 
+}
+
 .project-info h3 {
-  font-size: 1.2rem;
-  color: #4f46e5;
-  margin-bottom: 8px; 
+    font-size: 1.2rem;
+    color: #4f46e5;
+    margin-bottom: 8px; 
 }
+
 .project-info p {
-  color: #333;
-  line-height: 1.6;
-  font-size: .98rem; 
+    color: #333;
+    line-height: 1.6;
+    font-size: .98rem; 
 }
 
 /* Footer */
 footer {
-  background: #4f46e5;
-  color: #fff;
-  padding: 14px 0;
+    background: #4f46e5;
+    color: #fff;
+    padding: 14px 0;
+    margin-top: auto;
 }
+
 .footer-container { 
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 12px; 
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 12px; 
 }
+
 .footer-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px; 
-  text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px; 
+    text-align: center; 
 }
-.footer-info p, .contact-info p {
-  margin: 0;
-  font-size: .95rem; 
+
+.footer-info p, 
+.contact-info p {
+    margin: 0;
+    font-size: .95rem; 
 }
-.footer-info a {
-  color: #fff;
-  text-decoration: underline; 
+
+footer a {
+    color: #ffffff !important;
+    text-decoration: underline;
+    font-weight: 500;
 }
