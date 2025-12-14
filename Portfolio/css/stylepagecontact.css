@@ -1,168 +1,149 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; }
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f4f6fb;
-  color: #222;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; 
+/* Reset de base (copié de stylesacceuil.css) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6fb;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 2rem 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%; /* S'assurer que le main prend toute la largeur disponible */
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.7em;
+    color: #4f46e5;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Navigation (copiée de stylesacceuil.css) */
 nav {
-  margin: 0 auto 40px auto;
-  text-align: center;
+    margin: 0 auto 40px auto;
+    text-align: center;
 }
 .nav-links {
-  list-style: none;
-  display: inline-flex;
-  gap: 30px;
-  padding: 0;
+    list-style: none;
+    display: inline-flex;
+    gap: 30px;
+    padding: 0;
 }
 .nav-links li a {
-  text-decoration: none;
-  color: #4f46e5;
-  font-size: 1.15em;
-  font-weight: 500;
-  padding: 8px 18px;
-  border-radius: 8px;
-  transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+    color: #4f46e5;
+    font-size: 1.15em;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
 }
 .nav-links li a:hover {
-  background: #e0e7ff;
-  color: #222;
+    background: #e0e7ff;
+    color: #222;
 }
 
-h1 {
-  text-align: center;
-  font-size: 2.2rem;
-  color: #4f46e5;
-  margin-bottom: 28px;
+/* Style du bloc de contact (basé sur section#about et .documents-section) */
+.contact-section {
+    background: #fff;
+    margin: 30px auto;
+    padding: 32px 24px;
+    max-width: 600px; /* La taille du 'carré' */
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(79,70,229,0.07);
+    text-align: center;
+    animation: fadeInUp 0.8s;
 }
 
-form {
-  max-width: 550px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 25px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  border: 2px solid #e4e4e4;
+/* Animation (copiée de stylesacceuil.css) */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
+.contact-section h2 {
+    color: #6366f1;
+    margin-bottom: 18px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.contact-section p {
+    font-size: 1.08em;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 25px;
 }
 
-legend {
-  font-size: 1.3em;
-  color: #4f46e5;
-  margin-bottom: 12px;
-  font-weight: bold;
+/* Style du lien E-mail dans le bloc */
+.contact-email-link {
+    display: inline-block;
+    background: #4f46e5;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.2s;
+}
+.contact-email-link:hover {
+    background: #6366f1;
+    transform: translateY(-2px);
 }
 
-label {
-  display: block;
-  margin-top: 12px;
-  font-weight: 500;
-  color: #333;
+/* Style de l'icône GitHub en dessous du bloc */
+.github-link-container {
+    text-align: center;
+    margin-top: 30px; /* Espace entre le bloc et l'icône */
+    margin-bottom: 50px;
 }
 
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: 2px solid #d0d0d0;
-  border-radius: 8px;
-  font-size: 1em;
-  margin-top: 5px;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+.github-icon-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    font-size: 38px; /* Taille de l'icône */
+    color: #fff; /* Couleur de l'icône */
+    background: #212121; /* Couleur de fond (noir/gris foncé) */
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
 
-input:focus,
-textarea:focus {
-  border-color: #4f46e5;
-  outline: none;
-  box-shadow: 0 0 6px rgba(79, 70, 229, 0.3);
+.github-icon-link:hover {
+    transform: scale(1.1);
+    background: #4f46e5; /* Couleur au survol pour le faire ressortir */
+    box-shadow: 0 8px 15px rgba(79,70,229,0.3);
 }
 
-textarea {
-  resize: vertical;
-  min-height: 90px;
-}
-
-button,
-input[type="submit"] {
-  margin-top: 18px;
-  background: #4f46e5;
-  color: #fff;
-  border: none;
-  padding: 10px 22px;
-  border-radius: 8px;
-  font-size: 1em;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-button:hover,
-input[type="submit"]:hover {
-  background: #3b36c9;
-  transform: translateY(-2px);
-}
-
+/* Footer (copié de stylesacceuil.css) */
 footer {
-  background: #4f46e5;
-  color: #fff;
-  padding: 14px 0;
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.footer-container { 
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 12px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.footer-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px; 
-  text-align: center; 
+    background: #4f46e5;
+    color: #fff;
+    padding: 12px 0 8px 0;
+    margin-top: auto; /* Pousse le footer en bas */
+    text-align: center;
 }
 .footer-info, .contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
+    margin: 6px 0;
 }
-.footer-info p, .contact-info p {
-  margin: 0;
-  font-size: .95rem; 
-}
-.footer-info a, .contact-info a {
-  color: #fff;
-  text-decoration: underline; 
-}
-.footer-info a:hover, .contact-info a:hover {
-  text-decoration: none;
-}
-
-@media (max-width: 600px) {
-  form {
-    width: 90%;
-    padding: 20px;
-  }
-  h1 {
-    font-size: 1.8rem;
-  }
+.contact-info a {
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 4px;
 }

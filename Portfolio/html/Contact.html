@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Portfolio</title>
     <link rel="stylesheet" href="../css/stylepagecontact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <h1>Contact</h1>
@@ -18,67 +19,33 @@
         </ul>
     </nav>
 
-    <main>        <section>
-                    <div class="contact">
-                        <form method="POST" class="form" action="">
-                            <fieldset>
-                                <legend>Contact Me</legend>
-                                <div class="form-input">
-                                    <label for="Name">Nom & Prenom *</label>
-                                    <input type="text" name="Name" id="Name" placeholder=" " autocomplete="off" class="form-control-material" required="required"  />
-                                </div>
+    <main>
+        <section class="contact-section">
+            <h2>Me Contacter et Découvrir mes Projets</h2>
+            <p>
+                Vous pouvez me contacter directement par e-mail en cliquant sur le lien ci-dessous. 
+                Jetez également un œil à mes autres projets sur mon profil GitHub !
+            </p>
+            <a href="mailto:alexgleizes18@gmail.com" class="contact-email-link">
+                Envoyer un E-mail
+            </a>
+        </section>
 
-                                <div class="form-input">
-
-                                    <label for="email">Emails</label>
-
-                                    <input type="email" name="email" id="email" placeholder=" " autocomplete="off" class="form-control-material"  required="required" />
-
-                                </div>
-
-                                <div class="form-input">
-
-                                    <label for="tel">N° telephone</label>
-
-                                    <input type="tel" name="tel" id="tel" placeholder=" " autocomplete="off" class="form-control-material" />
-                                </div>
-
-                                <div class="form-input">
-                                    <label for="sujet">Sujet *</label>
-
-                                    <input type="text" name="sujet" id="sujet" placeholder=" " autocomplete="off" class="form-control-material" required="required"  />
-                                </div>
-
-                                <div class="form-input">
-                                    <label for="message">Message * </label>
-
-                                    <textarea name="message" id="message"  required="required" ></textarea>
-                                </div>
-
-                                <button type="submit" class="btn">
-                                    Envoyer
-                                </button>
-                            </fieldset>
-                            
-                        </form>
-                    </div>
-                </section>
-
+        <div class="github-link-container">
+            <a href="https://github.com/Flyscream" target="_blank" class="github-icon-link">
+                <i class="fab fa-github"></i> 
+            </a>
+        </div>
     </main> 
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-row">
-                <div class="footer-info">
-                    <p>Alexandre Gleizes</p>
-                    <p>PORTFOLIO SITE</p>
-                </div>
-            
-                <div class="contact-info">
-                    <p>©️ Créé par Alexandre Gleizes</p>
-                    <p>Email : <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSHxTqbjzKtzNltXtJpMzxMhHWLTFGggNJwCWwWBDgwRWNqkPwkQHmnqcNQvQdtXRGlWLQrP">alexgleizes18@gmail.com</a></p>
-                </div>
-            </div>
+        <div class="footer-info">
+            <p>Alexandre Gleizes</p>
+            <p>PORTFOLIO SITE</p>
+        </div>
+        <div class="contact-info">
+            <p>©️ Créé par Alexandre Gleizes</p>
+            <p>Email : <a href="mailto:alexgleizes18@gmail.com">alexgleizes18@gmail.com</a></p>
         </div>
     </footer>
 </body>
