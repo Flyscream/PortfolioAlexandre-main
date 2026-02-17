@@ -1,4 +1,3 @@
-/* Reset de base (copié de stylesacceuil.css) */
 * {
     margin: 0;
     padding: 0;
@@ -14,15 +13,6 @@ body {
     flex-direction: column;
 }
 
-main {
-    flex: 1;
-    padding: 2rem 1rem;
-    max-width: 1100px;
-    margin: 0 auto;
-    width: 100%; /* S'assurer que le main prend toute la largeur disponible */
-}
-
-/* Header */
 h1 {
     text-align: center;
     margin-top: 40px;
@@ -32,7 +22,6 @@ h1 {
     letter-spacing: 1px;
 }
 
-/* Navigation (copiée de stylesacceuil.css) */
 nav {
     margin: 0 auto 40px auto;
     text-align: center;
@@ -57,86 +46,107 @@ nav {
     color: #222;
 }
 
-/* Style du bloc de contact (basé sur section#about et .documents-section) */
-.contact-section {
-    background: #fff;
-    margin: 30px auto;
-    padding: 32px 24px;
-    max-width: 600px; /* La taille du 'carré' */
-    border-radius: 16px;
-    box-shadow: 0 2px 16px rgba(79,70,229,0.07);
-    text-align: center;
-    animation: fadeInUp 0.8s;
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
 }
 
-/* Animation (copiée de stylesacceuil.css) */
+.contact-card {
+    background: #fff;
+    width: 100%;
+    max-width: 550px;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.1);
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+}
+
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-.contact-section h2 {
-    color: #6366f1;
-    margin-bottom: 18px;
-    font-size: 1.5em;
-    font-weight: 600;
-}
-.contact-section p {
-    font-size: 1.08em;
-    line-height: 1.7;
-    color: #333;
+.main-icon {
+    font-size: 3rem;
+    color: #4f46e5;
+    background: #f0f1ff;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    border-radius: 50%;
     margin-bottom: 25px;
 }
 
-/* Style du lien E-mail dans le bloc */
-.contact-email-link {
-    display: inline-block;
-    background: #4f46e5;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 25px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: background 0.2s, transform 0.2s;
-}
-.contact-email-link:hover {
-    background: #6366f1;
-    transform: translateY(-2px);
+.contact-card h2 {
+    color: #222;
+    font-size: 1.8em;
+    margin-bottom: 15px;
 }
 
-/* Style de l'icône GitHub en dessous du bloc */
-.github-link-container {
-    text-align: center;
-    margin-top: 30px; /* Espace entre le bloc et l'icône */
-    margin-bottom: 50px;
+.contact-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 35px;
 }
 
-.github-icon-link {
-    display: inline-flex;
-    justify-content: center;
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-contact {
+    display: flex;
     align-items: center;
-    width: 65px;
-    height: 65px;
-    font-size: 38px; /* Taille de l'icône */
-    color: #fff; /* Couleur de l'icône */
-    background: #212121; /* Couleur de fond (noir/gris foncé) */
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    text-align: left;
 }
 
-.github-icon-link:hover {
-    transform: scale(1.1);
-    background: #4f46e5; /* Couleur au survol pour le faire ressortir */
-    box-shadow: 0 8px 15px rgba(79,70,229,0.3);
+.btn-contact i {
+    font-size: 1.8rem;
+    margin-right: 20px;
+    width: 30px;
 }
 
-/* Footer (copié de stylesacceuil.css) */
+.btn-text span {
+    display: block;
+    font-size: 0.85rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-text strong {
+    display: block;
+    font-size: 1.05rem;
+    color: #333;
+}
+
+.email { background: #f8f9ff; }
+.github { background: #fafafa; }
+
+.btn-contact:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-color: #4f46e5;
+}
+
+.email:hover i { color: #4f46e5; }
+.github:hover i { color: #222; }
+
 footer {
     background: #4f46e5;
     color: #fff;
     padding: 12px 0 8px 0;
-    margin-top: auto; /* Pousse le footer en bas */
+    margin-top: auto;
     text-align: center;
 }
 .footer-info, .contact-info {
