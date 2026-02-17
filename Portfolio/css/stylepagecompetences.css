@@ -1,125 +1,140 @@
-/* Reset */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+:root {
+    --primary: #4f46e5;
+    --primary-light: #e0e7ff;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --bg-body: #f8fafc;
+    --white: #ffffff;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-body);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* NAVIGATION */
+nav { margin: 0 auto 40px auto; text-align: center; }
+.nav-links { list-style: none; display: inline-flex; gap: 30px; padding: 0; }
+.nav-links li a { 
+    text-decoration: none; color: var(--primary); font-size: 1.15em; font-weight: 500; 
+    padding: 8px 18px; border-radius: 8px; transition: 0.3s; 
+}
+.nav-links li a:hover { background: var(--primary-light); color: var(--text-dark); }
+
+/* TITRE & MAIN */
 h1 {
-  text-align: center;
-  font-size: 2.2rem;
-  color: #4f46e5;
-  margin-bottom: 28px;
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 40px;
+    font-weight: 800;
 }
 
 main {
-  padding: 2rem 1rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  flex: 1; /* permet au footer de descendre en bas */
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    flex: 1; /* Pousse le footer vers le bas */
 }
 
-/* Navigation */
-nav {
-  margin: 0 auto 40px auto;
-  text-align: center;
-}
-.nav-links {
-  list-style: none;
-  display: inline-flex;
-  gap: 30px;
-  padding: 0;
-}
-.nav-links li a {
-  text-decoration: none;
-  color: #4f46e5;
-  font-size: 1.15em;
-  font-weight: 500;
-  padding: 8px 18px;
-  border-radius: 8px;
-  transition: background 0.2s, color 0.2s;
-}
-.nav-links li a:hover {
-  background: #e0e7ff;
-  color: #222;
+/* GRILLE DE COMPÉTENCES */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-/* Cartes compétences */
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-.card {
-  width: 200px;
-  height: 280px;
-  margin: 10px;
-  text-align: center;
-  padding: 10px;
-  border: 2px solid #AAA;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  background: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-  border-color: #4f46e5;
-}
-.card img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-.card:hover img {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 8px rgba(79,70,229,0.4));
-}
-.card h2 { font-size: 1.1em; margin-bottom: 5px; }
-.card p { font-size: 0.85em; margin-bottom: 8px; }
-
-progress {
-  width: 80%;
-  height: 8px;
-  border-radius: 4px;
-  overflow: hidden;
-  appearance: none;
+.skill-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #f1f5f9;
 }
 
-/* Footer fixé en bas */
-footer {
-  margin-top: auto;         /* colle le footer en bas */
-  width: 100%;              /* pleine largeur */
-  background: #4f46e5;
-  color: #fff;
-  padding: 14px 0;
-  text-align: center;       /* texte centré */
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-.footer-info, .contact-info {
-  margin-bottom: 6px;
+.skill-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
 }
 
-.footer-info p,
-.contact-info p {
-  margin: 0;
-  font-size: 0.95rem;
+/* BARRE DE PROGRESSION */
+.progress-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
 }
 
-footer a {
-  color: #fff;
-  text-decoration: underline;
+.progress-bar {
+    flex: 1;
+    background: #e2e8f0;
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-/* Responsive */
-@media (max-width: 700px) {
-  .card { width: 150px; height: 250px; }
-  .card img { width: 60px; height: 60px; }
+.progress-fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.progress-percent {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* FOOTER HARMONISÉ */
+footer { 
+    background: var(--primary); 
+    color: #fff; 
+    padding: 20px 0; 
+    text-align: center; 
+    margin-top: auto; 
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-row { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 5px; 
+}
+
+.footer-info p, .contact-info p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+footer a { 
+    color: #fff !important; 
+    text-decoration: underline; 
 }
