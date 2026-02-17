@@ -1,0 +1,81 @@
+[
+    {
+        "competence": "Python",
+        "description": "IA Pacman, gestion de données, gestion de serveur.",
+        "image": "../img/imagespython.jpg",
+        "niveau": 55
+    },
+    {
+        "competence": "HTML",
+        "description": "Sites internet pour des projets et dynamiques.",
+        "image": "../img/imageHTML.png",
+        "niveau": 65
+    },
+    {
+        "competence": "Base de données SQL",
+        "description": "Gestion de bases de données, communication avec les bases de données.",
+        "image": "../img/sql.png",
+        "niveau": 50
+    },
+    {
+        "competence": "CSS",
+        "description": "Stylisation de pages, animations de pages. Et utilisation de frameworks comme Bootstrap ou encore Tailwind.",
+        "image": "../img/CSS.png",
+        "niveau": 60
+        
+    },
+    {
+        "competence": "JavaScript",
+        "description": "Gestion des clients sur site internet, Bot Discord.js, développement de jeux vidéo.",
+        "image": "../img/javascript.png",
+        "niveau": 20
+    },
+    {
+        "competence": "Arduino",
+        "description": "Création de feux de circulation, configuration d'une carte pour un projet, gestion de l’heure, gestion du matériel et du logiciel.",
+        "image": "../img/arduino.png",
+        "niveau": 40
+    }, 
+    {
+        "competence": "Java",
+        "description": "Implémentation front-end et back-end d'un logiciel (pour un projet).",
+        "image": "../img/java.png",
+        "niveau": 38
+    },
+    {
+        "competence": "C++",
+        "description": "Utilisation de C++ pour des projets scolaires.",
+        "image": "../img/c++.png",
+        "niveau": 35
+    },
+        {
+        "competence": "VBA",
+        "description": "Maîtrise du langage VBA pour automatiser les tâches dans Excel.",
+        "image": "../img/vba.png",
+        "niveau": 30
+    },
+    {
+        "competence": "PHP",
+        "description": "Compétence en programmation côté serveur pour le développement de sites web dynamiques.",
+        "image": "../img/php.png",
+        "niveau": 35
+    },
+    {
+        "competence": "Wordpress",
+        "description": "Expérience dans la création et la gestion de sites web à l'aide de WordPress, avec une bonne compréhension des thèmes et des plugins.",
+        "image": "../img/wordpress.png",
+        "niveau": 40
+    },
+        {
+        "competence": "Angular",
+        "description": "Maîtrise du framework Angular pour le développement d'applications web modernes.",
+        "image": "../img/Angular.png",
+        "niveau": 40
+    },
+    {
+        "competence": "Github",
+        "description": "Compétence en gestion de versions et collaboration sur des projets logiciels.",
+        "image": "../img/github.png",
+        "niveau": 66
+    }
+]
