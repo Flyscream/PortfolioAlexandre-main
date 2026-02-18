@@ -21,7 +21,6 @@ body {
     min-height: 100vh;
 }
 
-/* NAVIGATION */
 nav { margin: 0 auto 40px auto; text-align: center; }
 .nav-links { list-style: none; display: inline-flex; gap: 30px; padding: 0; }
 .nav-links li a { 
@@ -30,7 +29,6 @@ nav { margin: 0 auto 40px auto; text-align: center; }
 }
 .nav-links li a:hover { background: var(--primary-light); color: var(--text-dark); }
 
-/* TITRE & MAIN */
 h1 {
     text-align: center;
     font-size: 2.5rem;
@@ -44,10 +42,9 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
-    flex: 1; /* Pousse le footer vers le bas */
+    flex: 1; 
 }
 
-/* GRILLE DE COMPÉTENCES */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -79,7 +76,6 @@ main {
     margin-bottom: 15px;
 }
 
-/* BARRE DE PROGRESSION */
 .progress-wrapper {
     width: 100%;
     display: flex;
@@ -108,7 +104,6 @@ main {
     color: var(--primary);
 }
 
-/* FOOTER HARMONISÉ */
 footer { 
     background: var(--primary); 
     color: #fff; 
