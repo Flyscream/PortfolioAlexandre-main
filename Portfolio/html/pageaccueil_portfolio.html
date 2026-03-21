@@ -2,63 +2,155 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Portfolio d'Alexandre Gleizes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil — Portfolio Alexandre Gleizes</title>
+  <link rel="stylesheet" href="../css/style-global.css">
   <link rel="stylesheet" href="../css/stylesacceuil.css">
 </head>
 <body>
-  <h1>Portfolio Alexandre Gleizes</h1>
-  <a href="#" target="_blank">
-    <img src="../img/IMG_0980.JPG" alt="Photo de moi" class="photo_de_profil">
-  </a>
-  <nav>
-    <ul class="nav-links">
-      <li><a href="pageaccueil_portfolio.html">Accueil</a></li>
-      <li><a href="pagecompetences_portfolio.html">Compétences</a></li>
-      <li><a href="pageprojet_portfolio.html">Projets</a></li>
-      <li><a href="pageStage.html">Stage</a></li>
-      <li><a href="Contact.html">Contact</a></li>
-    </ul>
-  </nav>
 
-  <section id="about">
-    <h2>À propos de moi</h2>
-    <p> 
-      Je m'appelle Alexandre Gleizes, j'ai 21 ans et je suis actuellement en 2<sup>ème</sup> année de BTS SIO. 
-      Dans le cadre de mes études, j'ai eu l'occasion de programmer de nombreux petits projets, notamment des sites vitrines 
-      et une application permettant de visualiser en direct les avions dans le monde. Avant d'intégrer ce cursus, 
-      j'ai effectué une année de BUT Informatique à Orléans, où j'ai également travaillé sur de nombreux projets en équipe.
-    </p>
+  <header id="main-header">
+    <div class="nav-inner">
+      <a href="pageaccueil_portfolio.html" class="nav-logo">AG<span class="accent">.</span></a>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="pageaccueil_portfolio.html" class="active">Accueil</a></li>
+        <li><a href="pagecompetences_portfolio.html">Compétences</a></li>
+        <li><a href="pageprojet_portfolio.html">Projets</a></li>
+        <li><a href="pageStage.html">Stage</a></li>
+        <li><a href="Contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="page-wrap hero-grid">
+
+      <div class="hero-text">
+        <p class="page-eyebrow reveal"><span class="eyebrow-bar"></span>Développeur · BTS SIO</p>
+        <h1 class="hero-name reveal">Alexandre<br><span>Gleizes</span></h1>
+        <p class="hero-bio reveal">Passionné par le développement web et les applications, je construis des projets concrets mêlant technique et créativité.</p>
+        <div class="hero-ctas reveal">
+          <a href="pageprojet_portfolio.html" class="btn btn-primary">Voir mes projets</a>
+          <a href="Contact.html" class="btn btn-ghost">Me contacter</a>
+        </div>
+        <div class="hero-pills reveal">
+          <span class="pill">Python</span>
+          <span class="pill">HTML/CSS</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">Java</span>
+          <span class="pill">SQL</span>
+          <span class="pill">Angular</span>
+        </div>
+      </div>
+
+      <div class="hero-photo-col">
+        <div class="photo-frame reveal">
+          <div class="photo-ring r1"></div>
+          <div class="photo-ring r2"></div>
+          <img src="../img/IMG_0980.JPG" alt="Alexandre Gleizes" class="profile-pic">
+          <div class="available-badge"><span class="pulse-dot"></span>Disponible</div>
+        </div>
+        <div class="stat-bubble sb-top reveal">
+          <strong>8+</strong><span>Projets</span>
+        </div>
+        <div class="stat-bubble sb-bot reveal">
+          <strong>2</strong><span>Stages</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="hero-line"></div>
   </section>
 
-  <section class="documents-section">
-    <h2>Documents à télécharger</h2>
-    <div class="documents-container">
-      <a href="../files/projet veille techno.zip" class="document-card" download>
-        <img src="../img/veille-techno.png" alt="PDF">
-        <span class="filename">Veille techno Alexandre.zip</span>
-      </a>
-      <a href="../files/Tableau de synthèse Épreuve E4.csv" class="document-card" download>
-        <img src="../img/epreuve-E4.png" alt="CSV">
-        <span class="filename">Tableau Epreuve E4.csv</span>
-      </a>
-      <a href="../files/CV Alexandre GLEIZES 2025.pdf.pdf" class="document-card" download>
-        <img src="../img/imageCV.png" alt="CSV">
-        <span class="filename">CV Alexandre GLEIZES</span>
-      </a>
+  <!-- ABOUT -->
+  <section class="about-section">
+    <div class="page-wrap">
+      <div class="s-label reveal">À propos</div>
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <h2 class="page-title">Un développeur<br><span>curieux & ambitieux.</span></h2>
+          <p>Actuellement en 2<sup>ème</sup> année de BTS SIO, j'ai débuté par une année de BUT Informatique à Orléans. J'ai travaillé sur des projets variés — robotique Arduino, IA en Python, applications JO — et effectué deux stages en milieu bancaire.</p>
+          <p>À l'aise sur le front-end comme le back-end, j'aime construire des outils propres, fonctionnels et bien pensés.</p>
+          <a href="pagecompetences_portfolio.html" class="btn btn-ghost" style="margin-top:16px">Mes compétences →</a>
+        </div>
+        <div class="about-right reveal">
+          <div class="xp-item">
+            <div class="xp-dot" style="--c:#3b82f6"></div>
+            <div><div class="xp-name">BNP Paribas</div><div class="xp-detail">Stage · Janv–Fév 2026 · Angular</div></div>
+          </div>
+          <div class="xp-item">
+            <div class="xp-dot" style="--c:#10b981"></div>
+            <div><div class="xp-name">Crédit Agricole</div><div class="xp-detail">Stage · Mai–Juin 2024 · Java + VBA</div></div>
+          </div>
+          <div class="xp-item">
+            <div class="xp-dot" style="--c:#f59e0b"></div>
+            <div><div class="xp-name">IA Pac-Man</div><div class="xp-detail">Python · Algorithmes d'IA</div></div>
+          </div>
+          <div class="xp-item">
+            <div class="xp-dot" style="--c:#8b5cf6"></div>
+            <div><div class="xp-name">Application JO</div><div class="xp-detail">HTML / CSS / JS / SQL</div></div>
+          </div>
+          <div class="xp-item">
+            <div class="xp-dot" style="--c:#06b6d4"></div>
+            <div><div class="xp-name">Robot Arduino</div><div class="xp-detail">C · Impression 3D · Terminale</div></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  <section id="skills"></section>
-  <section id="projects"></section>
+
+  <!-- DOCUMENTS -->
+  <section class="docs-section">
+    <div class="page-wrap">
+      <div class="s-label reveal">Documents</div>
+      <h2 class="page-title reveal">Ressources <span>à télécharger</span></h2>
+      <div class="docs-row reveal">
+        <a href="../files/projet veille techno.zip" class="doc-card" download>
+          <img src="../img/veille-techno.png" alt="Veille technologique">
+          <div class="doc-info"><span class="doc-name">Veille technologique</span><span class="doc-type">.zip</span></div>
+          <span class="doc-dl">↓</span>
+        </a>
+        <a href="../files/Tableau de synthèse Épreuve E4.csv" class="doc-card" download>
+          <img src="../img/epreuve-E4.png" alt="Épreuve E4">
+          <div class="doc-info"><span class="doc-name">Tableau Épreuve E4</span><span class="doc-type">.csv</span></div>
+          <span class="doc-dl">↓</span>
+        </a>
+        <a href="../files/CV Alexandre GLEIZES 2025.pdf" class="doc-card" download>
+          <img src="../img/imageCV.png" alt="CV">
+          <div class="doc-info"><span class="doc-name">CV Alexandre Gleizes</span><span class="doc-type">.pdf</span></div>
+          <span class="doc-dl">↓</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <div class="footer-info">
-      <p>Alexandre Gleizes</p>
-      <p>PORTFOLIO SITE</p>
-    </div>
-    <div class="contact-info">
-      <p> Créé par Alexandre Gleizes</p>
-      <p>Email : <a href="mailto:alexgleizes18@gmail.com">alexgleizes18@gmail.com</a></p>
+    <div class="footer-inner">
+      <div><div class="footer-brand">AG<span class="accent">.</span></div><div class="footer-info">Alexandre Gleizes · Portfolio 2025</div></div>
+      <div class="footer-links">
+        <a href="pageprojet_portfolio.html">Projets</a>
+        <a href="pagecompetences_portfolio.html">Compétences</a>
+        <a href="pageStage.html">Stage</a>
+        <a href="Contact.html">Contact</a>
+        <a href="https://github.com/Flyscream" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      <div class="contact-info"><a href="mailto:alexgleizes18@gmail.com">alexgleizes18@gmail.com</a></div>
     </div>
   </footer>
+
+  <script>
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 40));
+    document.getElementById('burger').addEventListener('click', function() {
+      this.classList.toggle('open');
+      document.getElementById('nav-menu').classList.toggle('open');
+    });
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
 </body>
 </html>

@@ -1,61 +1,111 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Portfolio</title>
-    <link rel="stylesheet" href="../css/stylepagecontact.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Portfolio Alexandre Gleizes</title>
+  <link rel="stylesheet" href="../css/style-global.css">
+  <link rel="stylesheet" href="../css/stylepagecontact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1>Contact</h1>
-    <nav>
-        <ul class="nav-links">
-            <li><a href="pageaccueil_portfolio.html">Accueil</a></li>
-            <li><a href="pagecompetences_portfolio.html">Compétences</a></li>
-            <li><a href="pageprojet_portfolio.html">Projets</a></li>
-            <li><a href="pageStage.html">Stage</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
-    </nav>
 
-    <main>
-        <div class="contact-card">
-            <div class="card-intro">
-                <i class="fas fa-paper-plane main-icon"></i>
-                <h2>Me Contacter et Découvrir mes Projets</h2>
-                <p>Besoin d'un renseignement ou intéressé par mon profil ? <br> Choisissez le canal qui vous convient le mieux.</p>
+  <header id="main-header">
+    <div class="nav-inner">
+      <a href="pageaccueil_portfolio.html" class="nav-logo">AG<span class="accent">.</span></a>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="pageaccueil_portfolio.html">Accueil</a></li>
+        <li><a href="pagecompetences_portfolio.html">Compétences</a></li>
+        <li><a href="pageprojet_portfolio.html">Projets</a></li>
+        <li><a href="pageStage.html">Stage</a></li>
+        <li><a href="Contact.html" class="active nav-cta">Contact</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-wrap contact-layout">
+      <div class="contact-left reveal">
+        <p class="page-eyebrow"><span class="eyebrow-bar"></span>Restons en contact</p>
+        <h1 class="page-title">Vous avez un<br><span>projet en tête ?</span></h1>
+        <p class="contact-intro">N'hésitez pas à me contacter par mail ou à consulter mon travail sur GitHub. Je réponds rapidement.</p>
+
+        <div class="contact-links">
+          <a href="mailto:alexgleizes18@gmail.com" class="contact-link">
+            <div class="cl-icon"><i class="fas fa-envelope"></i></div>
+            <div class="cl-body">
+              <span class="cl-label">Email</span>
+              <span class="cl-value">alexgleizes18@gmail.com</span>
             </div>
-
-            <div class="contact-buttons">
-                <a href="mailto:alexgleizes18@gmail.com" class="btn-contact email">
-                    <i class="fas fa-envelope"></i>
-                    <div class="btn-text">
-                        <span>Envoyer un mail</span>
-                        <strong>alexgleizes18@gmail.com</strong>
-                    </div>
-                </a>
-
-                <a href="https://github.com/Flyscream" target="_blank" class="btn-contact github">
-                    <i class="fab fa-github"></i>
-                    <div class="btn-text">
-                        <span>Voir mon code</span>
-                        <strong>Profil GitHub</strong>
-                    </div>
-                </a>
+            <span class="cl-arrow">→</span>
+          </a>
+          <a href="https://github.com/Flyscream" target="_blank" rel="noopener" class="contact-link">
+            <div class="cl-icon"><i class="fab fa-github"></i></div>
+            <div class="cl-body">
+              <span class="cl-label">GitHub</span>
+              <span class="cl-value">github.com/Flyscream</span>
             </div>
+            <span class="cl-arrow">→</span>
+          </a>
         </div>
-    </main> 
+      </div>
 
-    <footer>
-        <div class="footer-info">
-            <p>Alexandre Gleizes</p>
-            <p>PORTFOLIO SITE</p>
+      <div class="contact-right reveal">
+        <div class="info-card">
+          <div class="info-card-header">
+            <span class="pulse-dot-blue"></span>
+            Disponible pour alternance / stage
+          </div>
+          <div class="info-rows">
+            <div class="info-row">
+              <span class="ir-label">Formation</span>
+              <span class="ir-value">BTS SIO · 2ème année</span>
+            </div>
+            <div class="info-row">
+              <span class="ir-label">Localisation</span>
+              <span class="ir-value">France</span>
+            </div>
+            <div class="info-row">
+              <span class="ir-label">Réponse</span>
+              <span class="ir-value">Sous 24h</span>
+            </div>
+            <div class="info-row">
+              <span class="ir-label">Langues</span>
+              <span class="ir-value">Français · Anglais</span>
+            </div>
+          </div>
+          <a href="../files/CV Alexandre GLEIZES 2025.pdf" download class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px">
+            ↓ Télécharger mon CV
+          </a>
         </div>
-        <div class="contact-info">
-            <p> Créé par Alexandre Gleizes</p>
-            <p>Email : <a href="mailto:alexgleizes18@gmail.com">alexgleizes18@gmail.com</a></p>
-        </div>
-    </footer>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><div class="footer-brand">AG<span class="accent">.</span></div><div class="footer-info">Alexandre Gleizes · Portfolio 2025</div></div>
+      <div class="footer-links">
+        <a href="pageprojet_portfolio.html">Projets</a>
+        <a href="pagecompetences_portfolio.html">Compétences</a>
+        <a href="pageStage.html">Stage</a>
+      </div>
+      <div class="contact-info"><a href="mailto:alexgleizes18@gmail.com">alexgleizes18@gmail.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 40));
+    document.getElementById('burger').addEventListener('click', function() {
+      this.classList.toggle('open');
+      document.getElementById('nav-menu').classList.toggle('open');
+    });
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
 </body>
 </html>
