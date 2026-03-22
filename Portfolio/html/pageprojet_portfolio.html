@@ -51,6 +51,7 @@
   <script>
     const header = document.getElementById('main-header');
     window.addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 40));
+    
     document.getElementById('burger').addEventListener('click', function() {
       this.classList.toggle('open');
       document.getElementById('nav-menu').classList.toggle('open');
@@ -61,25 +62,25 @@
     }, { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
+    // FETCH CORRECT : On charge les PROJETS
     fetch('../data/projets.json')
-      .then(r => r.json())
+      .then(response => {
+        if (!response.ok) throw new Error("Fichier projets.json introuvable");
+        return response.json();
+      })
       .then(data => {
         const container = document.getElementById('projects');
-        container.innerHTML = data.map((p, i) => `
-          <article class="project-card reveal" style="transition-delay:${i * 0.07}s">
-            <div class="project-img-wrap">
-              <img src="${p.image}" alt="${p.titre}">
-              <div class="project-num">${String(i + 1).padStart(2,'0')}</div>
-            </div>
-            <div class="project-body">
-              <h3>${p.titre}</h3>
-              <p>${p.description}</p>
+        container.innerHTML = data.map(projet => `
+          <article class="project-card">
+            <img src="${projet.image}" alt="${projet.titre}" />
+            <div class="project-info">
+              <h3>${projet.titre}</h3>
+              <p>${projet.description}</p>
             </div>
           </article>
         `).join('');
-        document.querySelectorAll('.project-card').forEach(el => obs.observe(el));
       })
-      .catch(err => console.error('Erreur chargement projets :', err));
+      .catch(error => console.error("Erreur de chargement projets :", error));
   </script>
 </body>
 </html>

@@ -47,29 +47,19 @@ main {
   object-fit: contain;
 }
 
-.skill-body { flex: 1; min-width: 0; }
-
-.skill-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 6px;
+.skill-content {
+  flex: 1;
+  min-width: 0;
 }
 
-.skill-header h3 {
+.skill-content h3 {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text);
+  margin-bottom: 6px;
 }
 
-.skill-pct {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--blue);
-  letter-spacing: 0.02em;
-}
-
-.skill-desc {
+.skill-content p {
   font-size: 0.8rem;
   color: var(--text2);
   line-height: 1.6;
@@ -77,18 +67,33 @@ main {
   font-weight: 300;
 }
 
-.skill-bar {
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress-bar {
+  flex: 1;
   height: 4px;
   background: var(--surface2);
   border-radius: 4px;
   overflow: hidden;
 }
 
-.skill-fill {
+.progress-fill {
   height: 100%;
   background: linear-gradient(90deg, var(--blue), var(--cyan));
   border-radius: 4px;
   transition: width 0.9s cubic-bezier(.2,.8,.2,1);
+}
+
+.progress-percent {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--blue);
+  min-width: 32px;
+  text-align: right;
 }
 
 @media (max-width: 600px) {

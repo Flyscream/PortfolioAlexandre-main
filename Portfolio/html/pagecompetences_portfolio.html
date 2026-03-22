@@ -50,7 +50,7 @@
   </footer>
 
   <script>
-    const header = document.getElementById('main-header');
+    const header = document.getElementById('main-header');  
     window.addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 40));
     document.getElementById('burger').addEventListener('click', function() {
       this.classList.toggle('open');
@@ -62,43 +62,33 @@
     }, { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
+    // FETCH CORRECT : On charge les COMPETENCES
     fetch('../data/competences.json')
-      .then(r => r.json())
+      .then(response => {
+        if (!response.ok) throw new Error("Fichier competences.json introuvable");
+        return response.json();
+      })
       .then(data => {
         const container = document.getElementById('competences-container');
-        container.innerHTML = data.map((skill, i) => `
-          <div class="skill-card reveal" style="transition-delay:${i * 0.05}s">
+        container.innerHTML = data.map(skill => `
+          <div class="skill-card">
             <div class="skill-icon">
-              <img src="${skill.image}" alt="${skill.competence}">
+              <img src="${skill.image}" alt="${skill.competence}" />
             </div>
-            <div class="skill-body">
-              <div class="skill-header">
-                <h3>${skill.competence}</h3>
-                <span class="skill-pct">${skill.niveau}%</span>
-              </div>
-              <p class="skill-desc">${skill.description}</p>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width:0%" data-w="${skill.niveau}%"></div>
+            <div class="skill-content">
+              <h3>${skill.competence}</h3>
+              <p>${skill.description}</p>
+              <div class="progress-wrapper">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: ${skill.niveau}%"></div>
+                </div>
+                <span class="progress-percent">${skill.niveau}%</span>
               </div>
             </div>
           </div>
         `).join('');
-
-        // Re-observer les nouvelles cartes
-        document.querySelectorAll('.skill-card').forEach(el => obs.observe(el));
-
-        // Animer les barres quand elles entrent dans le viewport
-        const barObs = new IntersectionObserver(entries => {
-          entries.forEach(e => {
-            if (e.isIntersecting) {
-              const fill = e.target.querySelector('.skill-fill');
-              if (fill) setTimeout(() => fill.style.width = fill.dataset.w, 100);
-            }
-          });
-        }, { threshold: 0.2 });
-        document.querySelectorAll('.skill-card').forEach(el => barObs.observe(el));
       })
-      .catch(err => console.error('Erreur chargement compétences :', err));
+      .catch(error => console.error("Erreur de chargement compétences :", error));
   </script>
 </body>
 </html>
