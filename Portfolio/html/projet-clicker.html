@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détails : Projet Clicker — Portfolio Alexandre Gleizes</title>
+  
+  <link rel="stylesheet" href="../css/style-global.css">
+  <link rel="stylesheet" href="../css/stylepageprojet-detail.css">
+</head>
+<body>
+
+  <header id="main-header">
+    <div class="nav-inner">
+      <a href="pageaccueil_portfolio.html" class="nav-logo">AG<span class="accent">.</span></a>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="pageaccueil_portfolio.html">Accueil</a></li>
+        <li><a href="pagecompetences_portfolio.html">Compétences</a></li>
+        <li><a href="pageprojet_portfolio.html">Projets</a></li>
+        <li><a href="pageStage.html">Stage</a></li>
+        <li><a href="Contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-wrap">
+      
+      <div class="back-link-container reveal">
+        <a href="pageprojet_portfolio.html" class="back-link">← Retour aux projets</a>
+      </div>
+      
+      <div class="detail-page-hero">
+        <h1 class="detail-page-title reveal">Détails : <span>Projet Clicker</span></h1>
+        <div class="detail-page-divider reveal"></div>
+      </div>
+
+      <div class="detail-content">
+        
+        <section class="detail-section image-left reveal">
+          <div class="detail-section-image-wrapper">
+            <img src="../img/clicker-arboraissance.png" alt="Interface SceneBuilder - Projet Clicker"> 
+          </div>
+          <div class="detail-section-text">
+            <h2>Conception de l'interface</h2>
+            <p>Pour ce projet de fin d'année en BTS SIO, j'ai utilisé <strong>SceneBuilder</strong> pour concevoir l'interface utilisateur. L'arboraissance du projet est une structure hiérarchique qui organise les éléments graphiques en arbre, facilitant la gestion et la modification de l'interface.</p>
+          </div>
+        </section>
+
+        <section class="detail-section image-right reveal">
+          <div class="detail-section-image-wrapper">
+            <img src="../img/fxml-clicker.png" alt="Code Java - Projet Clicker"> 
+          </div>
+          <div class="detail-section-text">
+            <h2>Logique en Java & JavaFX</h2>
+            <p>Le cœur du jeu repose sur la gestion des événements (EventHandlers) en <strong>Java</strong>. Chaque clic sur le bouton principal déclenche une fonction qui incrémente le compteur. J'ai mis en place un système de rafraîchissement dynamique de l'interface pour que le score se mette à jour instantanément à l'écran, sans latence pour l'utilisateur.</p>
+          </div>
+        </section>
+
+        <section class="detail-section image-left reveal">
+          <div class="detail-section-image-wrapper">
+            <img src="../img/clicker-classes.png" alt="Système d'améliorations - Clicker"> 
+          </div>
+          <div class="detail-section-text">
+            <h2>Économie et Améliorations</h2>
+            <p>Un jeu de type clicker n'est rien sans ses "upgrades". J'ai développé une logique permettant d'acheter des multiplicateurs de clics et des revenus passifs (auto-click). Le coût des améliorations augmente de manière exponentielle, obligeant le joueur à faire des choix stratégiques pour optimiser sa progression.</p>
+          </div>
+        </section>
+        
+        <section class="comparison-section reveal">
+          <h2 class="comparison-title">Facilités et difficultés</h2>
+          
+          <div class="comparison-grid">
+            
+            <div class="comparison-box">
+              <h3>JavaFX / SceneBuilder</h3>
+              <div class="comparison-item">
+                <span class="point ease">Facilité</span>
+                <p>La création visuelle de l'interface grâce au drag-and-drop de SceneBuilder.</p>
+                <p>La documentation riche et les nombreux tutoriels disponibles en ligne.</p>
+              </div>
+              <div class="comparison-item">
+                <span class="point difficulty">Difficulté</span>
+                <p>Lier correctement les ID du fichier FXML avec les contrôleurs Java.</p>
+                <p>Gérer les événements de manière fluide pour éviter les bugs d'interface.</p>
+                <p>Optimiser les performances pour un rendu réactif.</p>
+              </div>
+            </div>
+            
+            <div class="comparison-box">
+              <h3>Logique de Jeu</h3>
+              <div class="comparison-item">
+                <span class="point ease">Facilité</span>
+                <p>Projet terminé entièrement</p>
+                <p>Création de plusieurs interfaces</p>
+                <p>Gestion de Scene Builder</p>
+                <p>Utilisation de surcharge</p>
+              </div>
+              <div class="comparison-item">
+                <span class="point difficulty">Difficulté</span>
+                <p>Systeme de sauvegarde du jeu</p>
+                <p>Barre de progression en fonction des cliks effectués</p>
+                <p>Amélioration du design de l'interface</p>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><div class="footer-brand">AG<span class="accent">.</span></div><div class="footer-info">Alexandre Gleizes · Portfolio 2025</div></div>
+      <div class="footer-links">
+        <a href="pagecompetences_portfolio.html">Compétences</a>
+        <a href="pageStage.html">Stage</a>
+        <a href="Contact.html">Contact</a>
+        <a href="https://github.com/Flyscream" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      <div class="contact-info"><a href="mailto:alexgleizes18@gmail.com">alexgleizes18@gmail.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('burger').addEventListener('click', function() {
+      this.classList.toggle('open');
+      document.getElementById('nav-menu').classList.toggle('open');
+    });
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
