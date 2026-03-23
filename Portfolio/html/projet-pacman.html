@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détails : IA Pac-Man — Portfolio Alexandre Gleizes</title>
+  
+  <link rel="stylesheet" href="../css/style-global.css">
+  
+  <link rel="stylesheet" href="../css/stylepageprojet-detail.css">
+</head>
+<body>
+
+  <header id="main-header">
+    <div class="nav-inner">
+      <a href="pageaccueil_portfolio.html" class="nav-logo">AG<span class="accent">.</span></a>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="pageaccueil_portfolio.html">Accueil</a></li>
+        <li><a href="pagecompetences_portfolio.html">Compétences</a></li>
+        <li><a href="pageprojet_portfolio.html">Projets</a></li> <li><a href="pageStage.html">Stage</a></li>
+        <li><a href="Contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-wrap">
+      
+      <div class="back-link-container reveal">
+        <a href="../html/pageprojet_portfolio.html" class="back-link">← Retour aux projets</a>
+      </div>
+      
+      <div class="detail-page-hero">
+        <h1 class="detail-page-title reveal">Détails : <span>IA Pac-Man</span></h1>
+        <div class="detail-page-divider reveal"></div>
+      </div>
+
+      <div class="detail-content">
+        
+        <section class="detail-section image-left reveal">
+          <div class="detail-section-image-wrapper">
+            <img src="../img/production-pac-man.png" alt="Analyse de production - IA Pac-Man"> 
+          </div>
+          <div class="detail-section-text">
+            <h2>Analyse de la production</h2>
+            <p>Ici, j'explique comment s'est déroulé le développement du projet. J'ai commencé par définir l'architecture globale, en séparant la gestion du jeu de l'IA. Cette section détaille le planning de production, les jalons de développement (milestones) et comment nous avons organisé les tâches en équipe pour respecter les délais.</p>
+          </div>
+        </section>
+
+        <section class="detail-section image-right reveal">
+          <div class="detail-section-image-wrapper">
+            <img src="../img/strategie-pac-man.png" alt="Stratégie de Pac-Man - IA"> 
+          </div>
+          <div class="detail-section-text">
+            <h2>Stratégie de Pac-Man</h2>
+            <p>Cette section détaille l'IA de Pac-Man. Le code, écrit en Python, analyse le plateau pour détecter les objets les plus proches : les petites boules pour les points et les grosses boules pour l'effroi. L'objectif est de calculer le chemin le plus court tout en évitant les fantômes. J'ai implémenté une logique de priorité pour maximiser le score.</p>
+          </div>
+        </section>
+
+        <section class="detail-section image-left reveal">
+          <div class="detail-section-image-wrapper">
+            <img src="../img/strategie-pac-man.png" alt="Stratégie des fantômes - IA"> 
+          </div>
+          <div class="detail-section-text">
+            <h2>Stratégie des fantômes</h2>
+            <p>Les fantômes utilisent une IA pour poursuivre Pac-Man. Ils n'ont pas un mouvement simplement aléatoire. J'ai codé une logique de prédiction qui essaie d'anticiper la prochaine direction de Pac-Man pour le prendre en tenaille. Une machine à états (state machine) a été mise en place pour gérer leurs comportements : Poursuite, Effroi, Retour à la base.</p>
+          </div>
+        </section>
+        
+        <section class="comparison-section reveal">
+          <h2 class="comparison-title">Facilités et difficultés</h2>
+          
+          <div class="comparison-grid">
+            
+            <div class="comparison-box">
+              <h3>Les API</h3>
+              <div class="comparison-item">
+                <span class="point ease">Facilité</span>
+                <p>Implémentation de la plupart des fonctions sans réelle difficulté.</p>
+              </div>
+              <div class="comparison-item">
+                <span class="point difficulty">Difficulté</span>
+                <p>Analyse du plateau et prochaine intersection.</p>
+              </div>
+            </div>
+            
+            <div class="comparison-box">
+              <h3>L'IA</h3>
+              <div class="comparison-item">
+                <span class="point ease">Facilité</span>
+                <p>Trouver des idées de stratégies.</p>
+              </div>
+              <div class="comparison-item">
+                <span class="point difficulty">Difficulté</span>
+                <p>Coder des stratégies trouvées.</p>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><div class="footer-brand">AG<span class="accent">.</span></div><div class="footer-info">Alexandre Gleizes · Portfolio 2025</div></div>
+      <div class="footer-links">
+        <a href="pagecompetences_portfolio.html">Compétences</a>
+        <a href="pageStage.html">Stage</a>
+        <a href="Contact.html">Contact</a>
+        <a href="https://github.com/Flyscream" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      <div class="contact-info"><a href="mailto:alexgleizes18@gmail.com">alexgleizes18@gmail.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // --- Burger Menu Script ---
+    document.getElementById('burger').addEventListener('click', function() {
+      this.classList.toggle('open');
+      document.getElementById('nav-menu').classList.toggle('open');
+    });
+
+    // --- Intersection Observer for reveal animations ---
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

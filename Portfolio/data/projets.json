@@ -5,10 +5,10 @@
         "image":"../img/arduino.jpg"
     },
     {
-
         "titre": "IA pour Pac-Man",
         "description":"En groupe, en utilisant le language python, nous devions créer une ia qui joue a notre place a pac-man. Sont but a été de faire le plus de points dans un temps impartie. Le projet a été realisé en quelques semaines en groupe de 4 personnes. il a fallut que nous fassions des recherches sur les algorithmes d'ia pour pouvoir le faire. Le projet a été un succès car nous avions finit dans les temps et l'ia fonctionnait plutot bien.",
-        "image":"../img/Pac-man.jpg"
+        "image":"../img/Pac-man.jpg",
+        "url": "projet-pacman.html" 
     },
     {
         "titre": "Application JO",
@@ -28,7 +28,8 @@
     {
         "titre": "Projet Clicker",
         "description":"La création du jeu clicker, est un projet de fin d'année de 1 ere année de BTS SIO. Le but du jeu était de créer un petit jeu en javaFx en utilisant Scenebuilder. Le jeu a été develloper en java ou le but est de cliquer sur un bouton pour gagner de l'argent et acheter des améliorations.Le projet a été un succès car j'ai réussi a faire un jeu fonctionnel et amusant.",
-        "image":"../img/click.png"
+        "image":"../img/click.png",
+        "url": "projet-clicker.html"
     },
     {
         "titre": "Projet Stage Crédit Agricole",
@@ -38,6 +39,7 @@
     {
         "titre": "Projet Stage BNP Paribas",
         "description":"Lors de mon stage de deuxième année au sein du service informatique de BNP Paribas, j’ai pu découvrir concrètement les différentes étapes du développement de l’application et du site web de la banque. J’ai notamment appris à utiliser le framework Angular, que j’ai ensuite appliqué dans la réalisation de plusieurs projets. De plus, ma participation aux réunions d’équipe m’a aidé à mieux comprendre les mécanismes de la communication en entreprise. Cette expérience s’est révélée très formatrice, aussi bien sur le plan technique que sur le plan humain.",
-        "image":"../img/BNP_Paribas.png"
+        "image":"../img/BNP_Paribas.png",
+        "url": "projet-bnp.html"
     }
 ]

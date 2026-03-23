@@ -1,0 +1,201 @@
+/* --- stylepageprojet-detail.css --- */
+
+/* --- Back Link (Lien de retour) --- */
+.back-link-container {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--text2);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 300;
+  transition: color var(--transition);
+}
+
+.back-link:hover {
+  color: var(--blue);
+}
+
+/* --- Grand Titre de la Page --- */
+h1.detail-page-title {
+  font-family: var(--fhead);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+h1.detail-page-title span {
+  color: var(--blue); /* Le vert néon de ton schéma */
+}
+
+.detail-page-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--blue);
+  border-radius: 2px;
+  margin-bottom: 60px;
+}
+
+/* --- Sections de Contenu (Alternance Image/Texte) --- */
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* Plus d'espace entre les sections pour la clarté */
+  padding-bottom: 80px;
+}
+
+.detail-section {
+  display: flex;
+  align-items: center;
+  gap: 60px; /* Espace entre image et texte */
+}
+
+/* Gestion de l'alternance GAUCHE / DROITE */
+.detail-section.image-left {
+  flex-direction: row;
+}
+
+.detail-section.image-right {
+  flex-direction: row-reverse;
+}
+
+/* Style des images de section */
+.detail-section-image-wrapper {
+  flex: 1;
+  max-width: 50%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.detail-section-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Style du texte explicatif */
+.detail-section-text {
+  flex: 1;
+  max-width: 50%;
+  color: var(--text2);
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.detail-section-text h2 {
+  font-family: var(--fhead);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 15px;
+}
+
+/* --- Section Finale : Facilités et difficultés --- */
+.comparison-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 50px 60px;
+  margin-bottom: 80px;
+}
+
+.comparison-title {
+  font-family: var(--fhead);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+  gap: 40px;
+}
+
+/* Style des boîtes avec bordure vert néon brillante */
+.comparison-box {
+  background: rgba(0,0,0,0.2);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* C'est ici qu'on met l'effet brillant vert */
+  border: 2px solid #0f0; /* Vert néon pur */
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+}
+
+.comparison-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 255, 0, 0.6); /* Brillance accentuée au survol */
+}
+
+.comparison-box h3 {
+  font-family: var(--fhead);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}
+
+.comparison-item {
+  margin-bottom: 20px;
+}
+
+/* Style spécifique pour les points "Facilité" et "Difficulté" */
+.comparison-item span.point {
+  display: inline-block;
+  color: var(--text);
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+/* Style pour "Facilité" - vert néon */
+.comparison-item span.point.ease {
+  color: #0f0; 
+}
+
+/* Style pour "Difficulté" - rouge pour marquer le coup */
+.comparison-item span.point.difficulty {
+  color: #ff4d4d;
+}
+
+.comparison-item p {
+  color: var(--text2);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/* --- Adaptabilité (Responsive) --- */
+
+@media (max-width: 900px) {
+  /* Pour tablettes, on passe les sections alternées en colonne */
+  .detail-section {
+    flex-direction: column !important; 
+    gap: 30px;
+  }
+  .detail-section-image-wrapper,
+  .detail-section-text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Pour téléphones */
+  h1.detail-page-title { font-size: 2rem; }
+  .comparison-grid { grid-template-columns: 1fr; gap: 20px; }
+  .comparison-section { padding: 30px; }
+}
