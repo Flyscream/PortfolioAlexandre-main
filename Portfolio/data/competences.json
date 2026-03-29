@@ -77,5 +77,11 @@
         "description": "Compétence en gestion de versions et collaboration sur des projets logiciels.",
         "image": "../img/github.png",
         "niveau": 66
+    },
+    {
+        "competence": "Docker",
+        "description": "Maîtrise de Docker pour la création, le déploiement et la gestion d'applications dans des conteneurs.",
+        "image": "../img/docker.png",
+        "niveau": 66
     }
 ]
