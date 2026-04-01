@@ -1,105 +1,81 @@
-/* --- Sections générales --- */
-.veille-section {
-  margin-bottom: 100px;
+/* Adaptation du style Stage pour la veille */
+
+.tl-item {
+    display: grid;
+    grid-template-columns: 130px 40px 1fr;
+    gap: 0 20px;
+    align-items: start;
 }
 
-.section-title {
-  font-family: var(--fhead);
-  font-size: 2rem;
-  color: var(--text);
-  margin-bottom: 30px;
+.tl-left {
+    padding-top: 22px;
+    text-align: right;
 }
 
-/* --- Tableau de synthèse --- */
-.table-container {
-  overflow-x: auto;
-  background: var(--surface);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+.tl-date {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #6366f1; /* Indigo-500 */
+    line-height: 1.3;
 }
 
-.synthese-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
+.tl-spine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding-top: 24px;
 }
 
-.synthese-table th, .synthese-table td {
-  padding: 20px;
-  border-bottom: 1px solid var(--border);
+.tl-dot {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: #6366f1;
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+    flex-shrink: 0;
+    z-index: 2;
 }
 
-.synthese-table th {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--blue);
-  font-family: var(--fhead);
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+.tl-line {
+    width: 1px;
+    flex: 1;
+    min-height: 60px;
+    background: linear-gradient(180deg, #6366f1 0%, rgba(51, 65, 85, 0.3) 100%);
+    margin-top: 6px;
 }
 
-.synthese-table td {
-  color: var(--text2);
-  font-size: 0.9rem;
-  font-weight: 300;
+.tl-card {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    border-radius: 1rem;
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
 }
 
-/* --- Veille Technologique (Cards) --- */
-.veille-topic {
-  margin-bottom: 40px;
-  color: var(--text2);
-  font-size: 1.1rem;
+.tl-card:hover {
+    border-color: #6366f1;
+    background: rgba(30, 41, 59, 0.6);
+    transform: translateX(8px);
 }
 
-.veille-topic span {
-  color: var(--blue);
-  font-weight: 600;
+.tl-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #f8fafc;
 }
 
-.veille-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+.tl-card p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 16px;
 }
 
-.veille-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 30px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.veille-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--blue);
-}
-
-.card-date {
-  font-size: 0.8rem;
-  color: var(--blue);
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-.veille-card h3 {
-  font-family: var(--fhead);
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: var(--text);
-}
-
-.veille-card p {
-  color: var(--text2);
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.read-more {
-  color: var(--blue);
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 600;
+@media (max-width: 640px) {
+    .tl-item { grid-template-columns: 1fr; }
+    .tl-left { text-align: left; padding-top: 0; padding-bottom: 10px; }
+    .tl-spine { display: none; }
+    embed { height: 400px; } /* Plus petit sur mobile */
 }
