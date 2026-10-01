@@ -38,7 +38,7 @@
     },
     {
         "titre": "Projet Stage BNP Paribas",
-        "description":"Lors de mon stage de deuxième année au sein du service informatique de BNP Paribas, j’ai pu découvrir concrètement les différentes étapes du développement de l’application et du site web de la banque. J’ai notamment appris à utiliser le framework Angular, que j’ai ensuite appliqué dans la réalisation de plusieurs projets. De plus, ma participation aux réunions d’équipe m’a aidé à mieux comprendre les mécanismes de la communication en entreprise. Cette expérience s’est révélée très formatrice, aussi bien sur le plan technique que sur le plan humain.",
+        "description":"https://flyscream.github.io/Portfolio-Angular/contact.html. Lors de mon stage de deuxième année au sein du service informatique de BNP Paribas, j’ai pu découvrir concrètement les différentes étapes du développement de l’application et du site web de la banque. J’ai notamment appris à utiliser le framework Angular, que j’ai ensuite appliqué dans la réalisation de plusieurs projets. De plus, ma participation aux réunions d’équipe m’a aidé à mieux comprendre les mécanismes de la communication en entreprise. Cette expérience s’est révélée très formatrice, aussi bien sur le plan technique que sur le plan humain.",
         "image":"../img/BNP_Paribas.png",
         "url": "projet-bnp.html"
     }
