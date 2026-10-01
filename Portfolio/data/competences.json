@@ -3,85 +3,85 @@
         "competence": "Python",
         "description": "IA Pacman, gestion de données, gestion de serveur.",
         "image": "../img/imagespython.jpg",
-        "niveau": 55
+        "niveau": "intermédiaire"
     },
     {
         "competence": "HTML",
         "description": "Sites internet pour des projets et dynamiques.",
         "image": "../img/imageHTML.png",
-        "niveau": 65
+        "niveau": "confirmé"
     },
     {
         "competence": "Base de données SQL",
         "description": "Gestion de bases de données, communication avec les bases de données.",
         "image": "../img/sql.png",
-        "niveau": 50
+        "niveau": "intermédiaire"
     },
     {
         "competence": "CSS",
         "description": "Stylisation de pages, animations de pages. Et utilisation de frameworks comme Bootstrap ou encore Tailwind.",
         "image": "../img/CSS.png",
-        "niveau": 60
+        "niveau": "confirmé"
         
     },
     {
         "competence": "JavaScript",
         "description": "Gestion des clients sur site internet, Bot Discord.js, développement de jeux vidéo.",
         "image": "../img/javascript.png",
-        "niveau": 20
+        "niveau": "intermédiaire"
     },
     {
         "competence": "Arduino",
         "description": "Création de feux de circulation, configuration d'une carte pour un projet, gestion de l’heure, gestion du matériel et du logiciel.",
         "image": "../img/arduino.png",
-        "niveau": 40
+        "niveau": "débutant"
     }, 
     {
         "competence": "Java",
         "description": "Implémentation front-end et back-end d'un logiciel (pour un projet).",
         "image": "../img/java.png",
-        "niveau": 38
+        "niveau": "intermédiaire"
     },
     {
         "competence": "C++",
         "description": "Utilisation de C++ pour des projets scolaires.",
         "image": "../img/c++.png",
-        "niveau": 35
+        "niveau": "débutant"
     },
         {
         "competence": "VBA",
         "description": "Maîtrise du langage VBA pour automatiser les tâches dans Excel.",
         "image": "../img/vba.png",
-        "niveau": 30
+        "niveau": "intermédiaire"
     },
     {
         "competence": "PHP",
         "description": "Compétence en programmation côté serveur pour le développement de sites web dynamiques.",
         "image": "../img/php.png",
-        "niveau": 35
+        "niveau": "confirmé"
     },
     {
         "competence": "Wordpress",
         "description": "Expérience dans la création et la gestion de sites web à l'aide de WordPress, avec une bonne compréhension des thèmes et des plugins.",
         "image": "../img/wordpress.png",
-        "niveau": 40
+        "niveau": "intermédiaire"
     },
         {
         "competence": "Angular",
         "description": "Maîtrise du framework Angular pour le développement d'applications web modernes.",
         "image": "../img/Angular.png",
-        "niveau": 40
+        "niveau": "intermédiaire"
     },
     {
         "competence": "Github",
         "description": "Compétence en gestion de versions et collaboration sur des projets logiciels.",
         "image": "../img/github.png",
-        "niveau": 66
+        "niveau": "confirmé"
     },
     {
         "competence": "Docker",
         "description": "Maîtrise de Docker pour la création, le déploiement et la gestion d'applications dans des conteneurs.",
         "image": "../img/docker.png",
-        "niveau": 66
+        "niveau": "confirmé"
     }
 ]
